@@ -1,0 +1,7 @@
+name = "mission-worker"
+main = "src/index.ts"
+compatibility_date = "2023-02-27"
+
+kv_namespaces = [
+  { binding = "MISSIONS", id = "e735aa62a895499f8b1628bbd074cba7", preview_id = "e18455a2331f4ffabcea891d961ebdf4" }
+]
