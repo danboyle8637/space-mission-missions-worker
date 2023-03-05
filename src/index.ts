@@ -7,8 +7,6 @@ export default {
     env: Env,
     ctx: ExecutionContext
   ): Promise<Response> {
-    const acitonRequest = request.clone();
-
     const url = new URL(request.url);
     const workerAction: Actions =
       (url.pathname.split("/").pop() as Actions) || "";
@@ -19,14 +17,14 @@ export default {
           return new Response("Bad Request", { status: 405 });
         }
 
-        return setMissions(acitonRequest, env);
+        return setMissions(request, env);
       }
       case "get-missions": {
         if (request.method !== "GET") {
           return new Response("Bad Request", { status: 405 });
         }
 
-        return getMissions(acitonRequest, env);
+        return getMissions(request, env);
       }
       default: {
         return new Response("Bad Request", { status: 500 });
