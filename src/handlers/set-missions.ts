@@ -1,6 +1,6 @@
 import { getErrorMessage } from "../helpers/worker";
 import { missions } from "../data";
-import type { Env, MissionDoc, MissionId } from "../types";
+import type { Env } from "../types";
 
 export async function setMissions(
   request: Request,

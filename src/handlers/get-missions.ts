@@ -6,7 +6,7 @@ export async function getMissions(
   env: Env
 ): Promise<Response> {
   try {
-    const missionDocs = await getMissionDocs(env);
+    const missionDocs: MissionDoc[] = await getMissionDocs(env);
 
     const response = new Response(JSON.stringify(missionDocs), { status: 200 });
     return response;

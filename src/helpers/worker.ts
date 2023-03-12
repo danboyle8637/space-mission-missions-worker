@@ -23,7 +23,5 @@ export const getMissionDocs = async (env: Env): Promise<MissionDoc[]> => {
     missionDocs.push(missionDoc);
   }
 
-  return new Promise((resolve) => {
-    resolve(missionDocs);
-  });
+  return missionDocs;
 };
